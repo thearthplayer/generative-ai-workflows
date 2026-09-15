@@ -1,0 +1,7 @@
+interface:
+  display_name: "官方媒体字幕"
+  short_description: "将音视频精校为保留原意且时间码准确的 SRT 字幕文件"
+  default_prompt: "Use $official-media-subtitles to turn this audio into a precisely timed, minimally edited SRT subtitle file."
+
+policy:
+  allow_implicit_invocation: true

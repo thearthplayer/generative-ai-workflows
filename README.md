@@ -37,3 +37,7 @@ I focus on practical production-oriented testing, including:
 - Suitability for professional media production
 
 Selected workflow notes, comparisons, and creative experiments will be added over time.
+
+## Public Skills / 公开技能
+
+- [官方媒体中文字幕 / Official Media Chinese Subtitles](skills/official-media-subtitles/README.md) — Faithful Chinese SRT production and proofreading, with GitHub-to-WorkBuddy installation instructions. 忠实原声的中文字幕制作与校对，附 WorkBuddy 安装说明。
