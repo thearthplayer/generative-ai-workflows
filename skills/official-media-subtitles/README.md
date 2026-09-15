@@ -1,5 +1,9 @@
 # 官方媒体中文字幕 / Official Media Chinese Subtitles
 
+**当前公开版本 / Current public version: 1.0.0** · 2026-09-15
+
+查看 [更新记录 / Changelog](CHANGELOG.md)；安装后读取技能文件夹中的 [VERSION](VERSION) 确认本地版本。版本号不保证文件未被本地修改。
+
 把音视频制作、校对为忠实原声、时间码准确的中文 SRT 字幕。保留原意、立场、有信息量的重复和自我修正，列出听不清或无法确认的内容。
 
 Create and proofread Chinese SRT subtitles faithful to the original speech and source timeline. Preserve meaning, stance, meaningful repetition and self-correction, and report unresolved uncertainties.
@@ -62,3 +66,42 @@ python3 scripts/validate_srt.py example.srt --media example.mp4 --forbid-commas-
 ## English installation notes
 
 Clone this public repository and install only `skills/official-media-subtitles` into your agent's verified skill directory. Preserve the complete folder, including scripts and references. Compare existing copies before replacement. This package does not include an ASR engine; Python 3 is needed for validation, and ffprobe for media-duration checks. Verify skill recognition and test a short authorized audio sample before routine use.
+
+## 版本与更新 / Versions and updates
+
+这是首次编号的公开版 **1.0.0**。先前下载的无版本文件按“未标记版本”处理，不能仅凭没有 VERSION 判断内容过旧；先比较文件。WorkBuddy 是否在界面显示版本取决于应用支持，本包不依赖该显示功能。
+
+版本使用“主版本.次版本.修订号”：
+- 修订号（如 1.0.1）：兼容的错误修复、小幅提示词或说明优化。
+- 次版本（如 1.1.0）：兼容地增加功能、可选能力或工作流程。
+- 主版本（如 2.0.0）：改变默认编辑规则、输出约定或运行依赖，可能需要使用者调整流程。
+
+`VERSION` 是发布版本依据；`SKILL.md` 中的 `metadata.version` 与首页版本同步维护。发布者每次发版应同时更新三处和 CHANGELOG，记录改动、依赖影响、迁移步骤与已完成的验证。发布后不要复用同一版本号承载新的修改；用 Git 提交 SHA 定位确切快照。
+
+### 给 WorkBuddy 的更新指令
+
+```text
+请检查我安装的 official-media-subtitles 是否有新版。
+公开仓库：https://github.com/thearthplayer/generative-ai-workflows
+技能子目录：skills/official-media-subtitles
+
+先读取已安装副本的 VERSION，再从公开仓库读取 VERSION 和 CHANGELOG.md。
+无版本文件标记为“未标记”，不要猜版本。远端无法读取时报告检查失败，不要说已经最新。
+有新版时说明变化，尤其是默认规则和依赖变化。比较本地文件，保留我的修改；遇到冲突先让我选择。
+确认可更新后先备份旧技能文件夹，再完整更新此技能及其脚本、参考文件。
+更新后核对 VERSION、metadata.version、文件完整性和应用识别状态，报告旧版、新版与来源提交 SHA。
+如本地和远端版本号相同但内容不同，报告本地修改或版本不一致，不要强行覆盖。
+不要更新仓库中其它技能或工作流。
+```
+
+Git 下载者可以在干净的克隆目录执行 `git pull --ff-only`；之后仍需更新 WorkBuddy 安装目录中的副本。ZIP 下载者需要重新下载新版。这两种方式均未配置后台自动检查或自动安装。
+
+如新版不适合：保留新版副本，将升级前备份恢复到原安装位置，刷新技能列表并核对版本。需要历史公开快照时，在 GitHub 的文件历史/提交记录中选择对应提交，不要将整个仓库回退来替换单个技能。
+
+### 发布者的操作约定
+
+本地优化先保存到私有备份；公开发布仍由作者明确指定。发布前检查内部案例、个人路径和凭据，保留公开版的脱敏处理。更新公开版不会自动开放私有仓库，也不会自动更新其他人的安装副本。
+
+### English
+
+Read VERSION in the installed skill folder to identify its declared version. Review CHANGELOG before upgrading. Compare local modifications, back up the old folder, update the complete skill, and verify both the version and agent recognition. Git pull updates the clone, not a separately installed copy. ZIP installations require a new download. No automatic updater is configured. Keep the source commit SHA for an exact snapshot and use the local backup for rollback.

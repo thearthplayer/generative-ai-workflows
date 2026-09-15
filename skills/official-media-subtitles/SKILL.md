@@ -1,5 +1,7 @@
 ---
 name: official-media-subtitles
+metadata:
+  version: "1.0.0"
 description: Convert supplied audio or video into precisely timed, editorially faithful Chinese SRT subtitles for official-media use. Apply when the user asks for 字幕, SRT, 音频转字幕, or subtitle proofreading; preserve the speakers' wording while removing only empty speech disfluencies, verify names and facts from background material, and report every unresolved uncertainty.
 ---
 
