@@ -1,10 +1,10 @@
 # 官方媒体中文字幕 / Official Media Chinese Subtitles
 
-**当前公开版本 / Current public version: 1.0.0** · 2026-09-15
+**当前公开版本 / Current public version: 2.0.0** · 2026-10-24
 
 查看 [更新记录 / Changelog](CHANGELOG.md)；安装后读取技能文件夹中的 [VERSION](VERSION) 确认本地版本。版本号不保证文件未被本地修改。
 
-把音视频制作、校对为忠实原声、时间码准确的中文 SRT 字幕。保留原意、立场、有信息量的重复和自我修正，列出听不清或无法确认的内容。
+把音视频制作、校对为忠实原声、时间码准确的中文 SRT 字幕。按上下文做语义减法，逐处复核“的／地／得”，同时保留原意、立场、有信息量的重复和自我修正，并列出听不清或无法确认的内容。
 
 Create and proofread Chinese SRT subtitles faithful to the original speech and source timeline. Preserve meaning, stance, meaningful repetition and self-correction, and report unresolved uncertainties.
 
@@ -69,7 +69,7 @@ Clone this public repository and install only `skills/official-media-subtitles` 
 
 ## 版本与更新 / Versions and updates
 
-这是首次编号的公开版 **1.0.0**。先前下载的无版本文件按“未标记版本”处理，不能仅凭没有 VERSION 判断内容过旧；先比较文件。WorkBuddy 是否在界面显示版本取决于应用支持，本包不依赖该显示功能。
+当前公开版为 **2.0.0**。这是一次主版本升级：默认编辑流程新增全量语义减法、中文语法与规范用字门槛，并加强定稿权威与跨版本对齐规则。1.x 使用者应先阅读 CHANGELOG、比较本地修改并保留旧版，再完整更新技能目录。先前下载的无版本文件按“未标记版本”处理，不能仅凭没有 VERSION 判断内容过旧；先比较文件。WorkBuddy 是否在界面显示版本取决于应用支持，本包不依赖该显示功能。
 
 版本使用“主版本.次版本.修订号”：
 - 修订号（如 1.0.1）：兼容的错误修复、小幅提示词或说明优化。
